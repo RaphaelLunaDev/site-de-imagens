@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+    header{
+        color: #fff;
+        background-color: blueviolet;
+        display: flex; /*O botão ira ficar alinhado com o texto */
+        padding: 16px 0; /*espacamento de 16 px em cima e em baixo, e dos lados 0*/
+        border-bottom: 16px solid rgb(76, 22, 126);
+        justify-content: center; /*Deixa tudo no meio da tela*/
+        text-transform: uppercase; /*Deixa o texto em maiúsculo*/
+        font-style: italic;
+    } 
+
+    header button {
+        margin-left: 16px;
+    }
+    form {
+        background-color: #c8d6e5;
+        padding: 24px 0; /*espacamento de 24 px em cima e em baixo, e dos lados 0*/
+        text-align: center; /*alinha todo o texto no centro da tela*/
+        display: none;
+    }
+    form h2 {
+        margin-bottom: 16px;
+    }
+    input,
+    button{
+        padding: 8px;
+    }
+    button{
+        background-color: green;
+        text-transform: uppercase; /*Deixa o texto em maiúsculo*/
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    #botao-cancelar { /* Id se chama com "#"    */
+        background-color: red;
+    }
+    ul {
+        display: flex; /*faz os itens ficar alinhado*/
+        flex-wrap: wrap; /*quando os itens ficar no maximo da tela ele vai pra outra linha*/
+    }
+    ul li {
+        max-width: 25%; /*Vai ficar 4 itens (as imagens em cada linha)*/
+        list-style: none; /*tira um pontinho prto que fica no canto da imagem por conta da lista*/
+        position: relative; /*vai fazer que a posição absolute do link não vaze para as outras extremidades*/
+        max-height: 280px; /*altura maxima*/
+    }
+    ul li img {
+        height: 100%; /*a imagem ira cobrir o tamanho maximo*/
+        width: 100%; /*a imagem ira cobrir os 25% da largura maxima*/
+    } 
+    .imagem-link {
+        padding: 16px;
+        background-color: rgba(0,0,0, 0.7); /*30% de tranparencia*/
+        /*Para posicionar o link no canto inferior do li precisa fazer isso :*/
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0; /*vai deixar o texto invisivel (para so apracer quando ouver o efeito hover)*/
+        transition: all ease 1s; /*transição quando passar o mouse*/
+    }
+    .imagem-link a {
+        color: #fff;
+        text-decoration: none; /*remove o underline*/
+    }
+    ul li:hover .imagem-link { /*sempre que passar o mouse em cima tanto da tela ou da imagem irá aparece o link*/
+        opacity: 1;
+    }
